@@ -32,10 +32,10 @@ const app = {
             image: "./assets/img/attention.jpg"
         },
         {
-            name: "Lemon Tree",
-            singer: "Fool's Garden",
-            path: "./assets/music/LemonTree.mp3",
-            image: "./assets/img/lemontree.jpg"
+            name: "Cơn Mưa Ngang Qua",
+            singer: "Sơn Tùng M-TP",
+            path: "./assets/music/conmuangangqua.mp3",
+            image: "./assets/img/conmuangangqua.jpg"
         },
         {
             name: "Monody",
@@ -44,16 +44,16 @@ const app = {
             image: "./assets/img/monody.jpg"
         },
         {
-            name: "Monsters",
-            singer: "Katie Sky",
-            path: "./assets/music/Monsters.mp3",
-            image: "./assets/img/monster.jpg"
+            name: "Chắc Ai Đó Sẽ Về",
+            singer: "Sơn Tùng M-TP",
+            path: "./assets/music/chacaidoseve.mp3",
+            image: "./assets/img/chacaidoseve.jpg"
         },
         {
-            name: "My Love",
-            singer: "Westlife",
-            path: "./assets/music/MyLove.mp3",
-            image: "./assets/img/mylove.jpg"
+            name: "Lối Nhỏ",
+            singer: "Đen,Phương Anh Đào",
+            path: "./assets/music/loinho.mp3",
+            image: "./assets/img/loinho.jpg"
         },
         {
             name: "Nevada",
@@ -256,7 +256,7 @@ const app = {
         setTimeout(() => {
             $('.song.active').scrollIntoView({
                 behavior: 'smooth',
-                block: this.currentIndex === 0 ? 'end' : 'nearest'
+                block: this.currentIndex === 0 ? 'end' : 'center'
 
             })
         }, 200)

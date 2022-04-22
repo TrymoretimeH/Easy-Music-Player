@@ -14,7 +14,7 @@ body {
     height: 100%;
     background-position: center;
     background-size: contain;
-    background-image: url('/assets/img/background.png');
+    background-image: url('../img/background.png');
 }
 
 html {

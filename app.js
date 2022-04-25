@@ -206,6 +206,7 @@ const app = {
             }
             audio.play()
             _this.render()
+            _this.scrollToActiveSong()
         }
 
         // Xử lý bật / tắt randomSong
@@ -226,11 +227,13 @@ const app = {
         audio.onended = function() {
             if (_this.isRepeat) {
                 audio.play()
+                _this.scrollToActiveSong()
             } else {
                 playedSong.push(_this.currentIndex)
                 if (playedSong.length === _this.songs.length)
                     playedSong = []
                 nextBtn.click()
+                _this.scrollToActiveSong()
             }
         }
 
@@ -243,6 +246,7 @@ const app = {
                     _this.currentIndex = Number(songNode.dataset.index)
                     _this.loadCurrentSong()
                     _this.render()
+                    _this.scrollToHeading()
                     audio.play()
                 }
                 // Xử lý khi click vào option
@@ -257,6 +261,15 @@ const app = {
             $('.song.active').scrollIntoView({
                 behavior: 'smooth',
                 block: this.currentIndex === 0 ? 'end' : 'center'
+            })
+        }, 200)
+    },
+    scrollToHeading: function() {
+        setTimeout(() => {
+            const firstSong = document.querySelectorAll('.song')[0];
+            firstSong.scrollIntoView({
+                behavior: 'smooth',
+                block: 'end'
 
             })
         }, 200)

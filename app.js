@@ -90,7 +90,13 @@ const app = {
             singer: "Avicii",
             path: "./assets/music/WaitingForLove-Avicii.mp3",
             image: "./assets/img/waitingforlove.jpg"
-        }
+        },
+        {
+            name: "Top Hit English Love Songs",
+            singer: "Various Singers",
+            path: "./assets/music/tophitenglishlovesongs.mp3",
+            image: "./assets/img/tophitenglishlovesongs.jpg"
+        },
     ],
     setConfig: function(key, value) {
         this.config[key] = value

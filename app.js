@@ -97,6 +97,12 @@ const app = {
             path: "./assets/music/tophitenglishlovesongs.mp3",
             image: "./assets/img/tophitenglishlovesongs.jpg"
         },
+        {
+            name: "10 Bản Nhạc Indie Hay Nhất Bạn Đừng Nên Bỏ Lỡ...",
+            singer: "Nghệ Sĩ Việt",
+            path: "./assets/music/10bannhacindie.mp3",
+            image: "./assets/img/10bannhacindie.jpg"
+        },
     ],
     setConfig: function(key, value) {
         this.config[key] = value

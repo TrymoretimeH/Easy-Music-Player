@@ -256,6 +256,7 @@ const app = {
                 // Xử lý click vào song
                 if (songNode) {
                     _this.currentIndex = Number(songNode.dataset.index)
+                    _this.setConfig('currentIndexSong', _this.currentIndex)
                     _this.loadCurrentSong()
                     _this.render()
                     _this.scrollToHeading()
@@ -282,7 +283,6 @@ const app = {
             firstSong.scrollIntoView({
                 behavior: 'smooth',
                 block: 'end'
-
             })
         }, 200)
     },
@@ -294,17 +294,20 @@ const app = {
     loadConfig: function() {
         this.isRandom = this.config.isRandom
         this.isRepeat = this.config.isRepeat
+        this.currentIndex = parseInt(this.config.currentIndexSong) || 0
     },
     nextSong: function() {
         this.currentIndex++
         if(this.currentIndex >= this.songs.length)
             this.currentIndex = 0
+        this.setConfig('currentIndexSong', this.currentIndex)
         this.loadCurrentSong()
     },
     prevSong: function() {
         this.currentIndex--
         if(this.currentIndex < 0)
             this.currentIndex = this.songs.length - 1
+        this.setConfig('currentIndexSong', this.currentIndex)
         this.loadCurrentSong()
     },
     playRandomSong: function() {
@@ -314,6 +317,7 @@ const app = {
         } while (playedSong.includes(newIndex))
 
         this.currentIndex = newIndex
+        this.setConfig('currentIndexSong', this.currentIndex)
         this.loadCurrentSong()
     },
     start: function () {
